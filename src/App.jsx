@@ -1,4 +1,4 @@
-import { useLocation, Route, Switch } from 'wouter'
+import { Router, useLocation, Route, Switch } from 'wouter'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navigation from './components/Navigation'
 import BackToTop from './components/BackToTop'
@@ -32,6 +32,7 @@ function App() {
   const [location] = useLocation()
 
   return (
+    <Router base={import.meta.env.BASE_URL}>
     <div className="relative">
       <Navigation />
       <AnimatePresence mode="wait">
@@ -51,6 +52,7 @@ function App() {
       </AnimatePresence>
       <BackToTop />
     </div>
+    </Router>
   )
 }
 

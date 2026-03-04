@@ -144,7 +144,7 @@ export default function Navigation() {
             <button
               onClick={() => {
                 if (isHome) scrollToSection('#contact')
-                else window.location.href = '/#contact'
+                else window.location.href = import.meta.env.BASE_URL + '#contact'
               }}
               className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
               style={{
